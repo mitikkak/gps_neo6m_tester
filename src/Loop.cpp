@@ -5,11 +5,12 @@ void readGps()
 {
   while (Serial.available())
   {
-      gps.encode(Serial.read());
+      gps << Serial.read();
   }
 }
 
 void loop()
 {
     readGps();
+    
 }

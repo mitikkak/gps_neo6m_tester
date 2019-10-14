@@ -1,3 +1,15 @@
 #include "Arduino.h"
+#include "Components.h"
 
-void loop() {}
+void readGps()
+{
+  while (Serial.available())
+  {
+      gps.encode(Serial.read());
+  }
+}
+
+void loop()
+{
+    readGps();
+}

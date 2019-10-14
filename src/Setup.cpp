@@ -1,3 +1,7 @@
 #include "Arduino.h"
+#include "Components.h"
 
-void setup() {}
+void setup()
+{
+    Serial.begin(9600);
+}
